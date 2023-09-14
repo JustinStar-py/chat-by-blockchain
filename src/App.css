@@ -1,38 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+
+body {
+    background-color: #100f0d !important;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#section-1 {
+  background: url("./images/bg.png");
+  background-size: contain;
+  height: 830px;
+  background-repeat: repeat-x;
+  margin: 50px 85px 40px 85px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#section-2 {
+  background: url("./images/bg.png");
+  background-size: contain;
+  height: 830px;
+  background-repeat: repeat-x;
+  margin: 50px 85px 40px 85px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#fantasy-main {
+  width: 475px;
+  position: relative;
+  left: 285px;
+  top: 180px;
+  transform: rotateZ(30deg);
+  z-index: -10;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#launch-btn {
+  position: relative;
+  width: 200px;
+  font-family: "Play";
+  right: 43rem;
+  top: 230px;
 }

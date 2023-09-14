@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import space from './images/space.png';
+import Header from './components /Header';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import './custom-js-codes/hover.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          God is kind
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id='section-1'>
+        <Header />
+        <img src={space} id='fantasy-main' alt='planet'></img>
+        <button id='launch-btn' className='btn btn-primary'>Open App</button>
+      </div>
+      <div id='section-2'>
+      </div>
     </div>
   );
 }
