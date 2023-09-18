@@ -1,8 +1,9 @@
 import $ from "jquery"
 
-var $container = $('body');
-var $drone = $('#fantasy-main');
-var $section = $("#section-1")
+var $container = $('html');
+var $drone = $('.fantasy-img');
+var $sectionOne = $("#section-1")
+var $sectionTwo = $("#section-2")
 
 var droneCenter = {
   x: $drone.width() / 2,
@@ -10,20 +11,27 @@ var droneCenter = {
 };
 
 // The Image moving
+$drone.css('transition', 'transform 0.07s ease-in-out');
+$sectionOne.css('transition', 'transform 0.3s ease');
+$sectionTwo.css('transition', 'transform 0.3s ease');
+
 $container.on('mousemove', function(event) {
-  var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 15; // Adjust the angle to control the descent
-  var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 15; // Adjust the angle to control the descent
-
+  var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 16; // Adjust the angle to control the descent
+  var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 16; // Adjust the angle to control the descent
+ 
   $drone.css('transform', `rotate3d(1, 1, 1, ${angleX}deg) translateY(${angleY}px)`);
-  $section.css("transform",`translate3d(${angleX}px, ${angleY}px, 0px)`)
 });
 
-$drone.on('mousemove', function(event) {
-  var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 15; // Adjust the angle to control the descent
-  var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 15; // Adjust the angle to control the descent
-
-  $drone.css('transform', `rotate3d(1, 1, 1, ${angleX}deg) translateY(${angleY}px)`);
-  $section.css("transform",`translate3d(${angleX}px, ${angleY}px, 0px)`)
+$sectionOne.on('mousemove', function(event) {
+  var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 20; // Adjust the angle to control the descent
+  var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 10; // Adjust the angle to control the descent
+  
+  $sectionOne.css("transform",`translate3d(${angleX}px, ${angleY}px, 0px)`)
 });
 
+$sectionTwo.on('mousemove', function(event) {
+  var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 20; // Adjust the angle to control the descent
+  var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 10; // Adjust the angle to control the descent
 
+  $sectionTwo.css("transform",`translate3d(${angleX}px, ${angleY}px, 0px)`)
+});

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(39, 39, 39) !important;
+}
+
+.dark-card.card {
+  background: #121212;
+  color: white;
+}
+
+input.form-control.dark-bg {
+    background: #1a1a1a;
+    border: none;
+    color: white;
+    padding-right: 2px;
+}
+
+.chat-message p {
+    background-color: rgb(41, 80, 255);
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.chat-message.me {
+  float: right;
+}
+
+.chat-message.me p {
+  background-color: rgb(116, 49, 251) !important;
+}
+
