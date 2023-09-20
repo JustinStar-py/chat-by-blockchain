@@ -2,11 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import "../components-css/Chat.css"
 import { Container, Row, Col, ListGroup, Card } from "react-bootstrap";
+import Header from './Header';
 
 const Chat = (props) => {
   return (
     <chat>
       <div className="Chat">
+      <Header {...{page:"app"}}/>
         <Container className="mt-5">
           <Row>
             <Col sm={4}>

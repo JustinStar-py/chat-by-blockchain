@@ -1,6 +1,7 @@
 import planet from './images/planet.png';
 import github from './images/github.png';
 import lock from './images/lock.png';
+import Header from './components /Header';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import './custom-js-codes/hover.js'
@@ -8,6 +9,7 @@ import './custom-js-codes/hover.js'
 function App() {
   return (
       <div className="App">
+        <Header {...{page:"home"}}/>
         <div id='section-1'>
             <img src={planet} id='first-fantasy' className='fantasy-img' alt='planet'></img>
             <button id='launch-btn' className='btn btn-light'>Open App</button>

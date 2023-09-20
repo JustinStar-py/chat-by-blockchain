@@ -13,6 +13,16 @@ nav {
   font-family: "Play";
 }
 
+#basic-navbar-nav #home-navbar {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#basic-navbar-nav #chat-navbar w3m-core-button{
+  position: absolute;
+  right: 10px;
+}
+
 @media screen and (min-width: 480px) {
   #section-1 {
     background: url("./images/bg.png");

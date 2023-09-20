@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { Web3Button } from '@web3modal/react'
 
 const Header = (props) => {
   return (
@@ -16,14 +17,25 @@ const Header = (props) => {
             alt="Logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          { props.page === "home" ?
+           <>
+            <Nav className="ml-auto" id="home-navbar">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/Github">Github</Nav.Link>
+              <Nav.Link href="/">Support</Nav.Link>
+              <Nav.Link href="/Chat">Open App</Nav.Link>
+            </Nav>
+          </>
+        :  
+          <>
+          <Nav id="chat-navbar">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Github">Github</Nav.Link>
-            <Nav.Link href="/">Support</Nav.Link>
-            <Nav.Link href="/Chat">Open App</Nav.Link>
+            <Web3Button />
           </Nav>
+        </>
+      }
         </Navbar.Collapse>
       </Container>
     </Navbar>
