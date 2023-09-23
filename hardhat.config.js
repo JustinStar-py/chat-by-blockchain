@@ -12,7 +12,7 @@ module.exports = {
     hardhat: {
       },
     testnet: {
-        url: "https://clean-restless-feather.bsc-testnet.discover.quiknode.pro/395608a8a3773bdc951423350b76ea030cc43cae/",
+        url: "https://aged-floral-cloud.bsc-testnet.discover.quiknode.pro/1ca68f0cd986a967e81678b1c02105f4588e60ae/",
         // url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
         chainId: 97,
         gasPrice: 12000000000,

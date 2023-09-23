@@ -2,11 +2,22 @@
 
 body {
     overflow-x: hidden;
+    /* background: url(./images/body-bg.jpg); */
+    /* background-size: 600px; */
+    /* filter: drop-shadow(10px); */
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: hue-rotate(25deg); */
 }
 
 .App {
-  background-color: rgb(24, 25, 25) !important;
+  /* background: url(https://images.wallpaperscraft.com/image/single/sky_stars_long_exposure_944443_3840x2160.jpg) !important; */
+  background: linear-gradient(120deg,rgb(21 21 21 / 38%),rgb(0 0 0 / 17%) 95%);
+  backdrop-filter: blur(3px);
   text-align: center;
+  background-size: 1600px !important;
+  background-attachment:fixed !important;
+  background-repeat: repeat-x !important;
 }
 
 nav {
@@ -15,13 +26,46 @@ nav {
 
 #basic-navbar-nav #home-navbar {
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 0px;
 }
 
-#basic-navbar-nav #chat-navbar w3m-core-button{
+#basic-navbar-nav #chat-navbar w3m-core-button {
   position: absolute;
   right: 10px;
 }
+
+nav.navbar.navbar-expand-lg.navbar-light {
+  position: relative;
+  top: 15px;
+  background: url(./images/bg-rounded.png);
+  /* background: linear-gradient(rgb(246, 246, 246),rgb(247, 254, 255)); */
+  background-size: cover;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  /* filter: invert(1); */
+  background-position: top;
+  margin: 0px 10px;
+
+}
+
+a.nav-link {
+  font-family: 'Righteous';
+  color: rgb(75, 75, 75);
+  font-size: 17px;
+  transition: 0.2s ease-in-out;
+  padding:5px;
+  /* border-right: 6.5px dotted rgba(54, 54, 54, 0.5); */
+  /* text-shadow: 1px 1px 10px rgb(119, 255, 255); */
+}
+
+a.nav-link:hover {
+  font-family: 'Righteous';
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  /* text-shadow: 1px 1px 10px rgb(232, 255, 253); */
+}
+
+
 
 @media screen and (min-width: 480px) {
   #section-1 {

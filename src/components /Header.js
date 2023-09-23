@@ -6,7 +6,7 @@ import { Web3Button } from '@web3modal/react'
 const Header = (props) => {
   return (
     <header>
-     <Navbar bg="light" expand="lg">
+     <Navbar bg="white" expand="lg" color="#fff">
       <Container>
         <Navbar.Brand href="#home">
           <img

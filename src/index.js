@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Chat from './components /Chat';
 import App from './App';
+import { createRoot } from 'react-dom/client';
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
@@ -19,8 +20,10 @@ const wagmiConfig = createConfig({
 })
 const ethereumClient = new EthereumClient(wagmiConfig, chains)
 
-ReactDOM.render(
-    <BrowserRouter>
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
+   <BrowserRouter>
        <WagmiConfig config={wagmiConfig}>
           <Switch>
                   <Route exact path="/" component={App}/>
@@ -28,6 +31,5 @@ ReactDOM.render(
           </Switch>
        </WagmiConfig>
        <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
-    </BrowserRouter>,
-    document.getElementById('root')
+    </BrowserRouter>
 );
