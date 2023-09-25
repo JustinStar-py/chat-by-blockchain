@@ -7,7 +7,11 @@ import Web3 from "web3";
 import contractAbi from "../json/messagerFactoryABI.json";
 import { useAccount } from "wagmi";
 import Skeleton from "@mui/material/Skeleton";
-import Stack from "@mui/material/Stack";
+import SendIcon from '@mui/icons-material/Send';
+import Avatar from '@mui/material/Avatar';
+import Chip from '@mui/material/Chip';
+import Icon from '@mui/material/Icon';
+
 
 const contractAddress = "0x2051ebC07BDbf1f9bCF41576084f0B3c8B4c9F57";
 
@@ -18,6 +22,18 @@ function Chat() {
   const [contract, setContract] = useState(null);
   const [addressList, setAddressList] = useState([]);
   const [addressListStatus, setAddressListStatus] = useState(false);
+  const [currectContact, setCurrectContact] = useState(null)
+  const [messagesList, setMessagesList] = useState([])
+  const [sendMessage, setSendMessage] = useState(null)
+
+
+  function changeCurrectContact(key) {
+    setCurrectContact(addressList[key]);
+  }
+
+  function changeSendMessage(event) {
+     setSendMessage(event.target.value)
+  }
 
   useEffect(() => {
     async function initWeb3() {
@@ -64,6 +80,29 @@ function Chat() {
     }
     sortContactList();
   }, [messages]);
+  
+  useEffect(() => {
+    async function fetchMessages() {
+      if (contract && isConnected) {
+        const sortMessagesList = [];
+        messages.forEach((val) => {
+          if (val._from === address && val._to === currectContact) {
+            sortMessagesList.push({
+              "type": "sent",
+              "msg": val._message
+            });
+          } else if (val._from === currectContact && val._to === address) {
+            sortMessagesList.push({
+              "type": "received",
+              "msg": val._message
+            });
+          }
+          setMessagesList(sortMessagesList);
+        });
+      }
+    }
+    fetchMessages();
+  }, [currectContact]);
 
   return (
     <>
@@ -79,10 +118,9 @@ function Chat() {
                       addressList.length > 0 ? (
                         <ListGroup>
                           {addressList.map((value, index) => (
-                            <ListGroup.Item
-                              key={index}
-                              className="mb-1 bg-light"
-                            >{`User ${value.slice(0, 5)}...${value.slice(38, 42)}`}</ListGroup.Item>
+                            <ListGroup.Item key={index} className="mb-1 bg-light" onClick={() => changeCurrectContact(index)}>
+                                 {`User ${value.slice(0, 5)}...${value.slice(38, 42)}`}
+                            </ListGroup.Item>
                           ))}
                         </ListGroup>
                       ) : (
@@ -104,28 +142,44 @@ function Chat() {
               </Card>
             </Col>
             <Col sm={8}>
-              <Card className="dark-card">
-                <Card.Header className="dark-bg">Chat Page</Card.Header>
+              <Card className="dark-card" style={{ height: 590 + "px" }}>
+                <Card.Header>Chat Page</Card.Header>
                 <Card.Body>
-                  <div className="chat-message">
-                    <strong>User 1:</strong> <p>Hello there!</p>
+                <div class="chat-box">
+                    {messagesList.length > 0 ? (
+                        messagesList.map((val, index) => (
+                          <div key={index} className={`${val.type === "received" ? "their" : "my"}-message`}>
+                            {val.type === "sent" ? (
+                              <>
+                                <Chip className="ml-3" label={val.msg} color="info" sx={{   height: 'auto', minHeight:40+'px',   '& .MuiChip-label': {     display: 'block',     whiteSpace: 'normal',   }, }}/>
+                              </>
+                            ) : (
+                              <>
+                                <Chip className="ml-3" avatar={<Avatar className="p-3">{currectContact.slice(0,4)}</Avatar>} label={val.msg} color="secondary"  sx={{   height: 'auto', minHeight:40+'px',   '& .MuiChip-label': {     display: 'block',     whiteSpace: 'normal',   }, }}/>
+                              </>
+                            )}
+                          </div>
+                        ))
+                      ) : (
+                        <>
+                          <Skeleton variant="rectangular" sx={{ bgcolor: '#3786acb3' }} height={160} className="m-1 rounded" />
+                          <Skeleton variant="rectangular" sx={{ bgcolor: '#3786acb3' }} height={100} className="m-1 rounded" />
+                          <Skeleton variant="rectangular" sx={{ bgcolor: '#3786acb3' }} height={40} className="m-1 rounded" />
+                        </>
+                      )}
                   </div>
-                  <div className="chat-message me">
-                    <p>Hi! How can I help you?</p><strong> : User 2</strong> 
-                  </div>
-                  {/* Add more chat messages as needed */}
                 </Card.Body>
                 <Card.Footer>
-                  {/* Input field for typing messages */}
                   <div className="input-group">
                     <input
                       type="text"
                       className="form-control dark-bg"
                       placeholder="Type your message..."
+                      onChange={changeSendMessage}
                     />
                     <div className="input-group-append">
                       <button className="btn btn-primary" type="button">
-                        Send
+                        <SendIcon/>
                       </button>
                     </div>
                   </div>

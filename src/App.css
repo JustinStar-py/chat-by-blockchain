@@ -2,12 +2,12 @@
 
 body {
     overflow-x: hidden;
-    /* background: url(./images/body-bg.jpg); */
+    background: url(./images/body-bg.jpg);
     /* background-size: 600px; */
     /* filter: drop-shadow(10px); */
     background-size: cover;
     background-attachment: fixed;
-    /* filter: hue-rotate(25deg); */
+    filter: hue-rotate(25deg);
 }
 
 .App {

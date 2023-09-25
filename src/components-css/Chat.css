@@ -2,33 +2,90 @@
 
 body {
     overflow-x: hidden;
-    background-color: rgb(39, 39, 39) !important;
+    /* background: rgb(51, 51, 51) !important; */
+    /* background-size: cover; */
+}
+
+.Chat {
+  height: 714px;
+  background: linear-gradient(359deg,rgb(26 26 26 / 92%),rgb(0 107 255 / 22%) 95%);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
 }
 
 .dark-card.card {
-  background: #121212;
+  background: rgb(0 0 0 / 40%);
   color: white;
+  filter: drop-shadow(2px 4px 6px black);
+  backdrop-filter: blur(5px);
+}
+
+.mb-1.bg-light.list-group-item {
+  border: none !important;
+  background: #464646 !important;
+  filter: invert(1);
+  color: aliceblue;
 }
 
 input.form-control.dark-bg {
-    background: #1a1a1a;
+    background: #191919;
     border: none;
     color: white;
     padding-right: 2px;
 }
 
-.chat-message p {
-    background-color: rgb(41, 80, 255);
-    display: inline-flex;
-    padding: 5px;
-    border-radius: 7px;
+/* .chat-box {
+  max-height: 400px;
+  overflow-y: scroll;
+} */
+
+.card-body {
+  overflow-y: scroll;
 }
 
-.chat-message.me {
-  float: right;
+.my-message {
+  background-color: #007bff00;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 1px 0;
+  text-align: right;
 }
 
-.chat-message.me p {
-  background-color: rgb(116, 49, 251) !important;
+/* Style for other person's messages */
+.their-message {
+  background-color: #f0f0f000;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 1px 0;
 }
 
+.card-header {
+    background: linear-gradient(45deg, #2fd5ff, #4961ff);
+}
+
+input.form-control {
+  background: antiquewhite !important;
+  margin-right: 10px;
+  border-radius: 10px !important;
+}
+
+/* Set the color for the scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+/* Set the color for the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+/* Optionally, you can style the scrollbar itself */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+  padding: 5px;
+}
