@@ -7,7 +7,7 @@ body {
     /* filter: drop-shadow(10px); */
     background-size: cover;
     background-attachment: fixed;
-    filter: hue-rotate(25deg);
+    /* filter: hue-rotate(25deg); */
 }
 
 .App {
@@ -66,6 +66,9 @@ a.nav-link:hover {
 }
 
 
+#w3m-modal {
+  overflow-x: hidden !important;
+}
 
 @media screen and (min-width: 480px) {
   #section-1 {

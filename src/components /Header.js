@@ -32,7 +32,7 @@ const Header = (props) => {
           <>
           <Nav id="chat-navbar">
             <Nav.Link href="/">Home</Nav.Link>
-            <Web3Button />
+            <Web3Button/>
           </Nav>
         </>
       }
