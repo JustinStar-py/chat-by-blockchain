@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/chat-by-blockchain/static/css/main.570479ae.css",
+    "main.js": "/chat-by-blockchain/static/js/main.b5c0917e.js",
+    "static/js/820.6610cff9.chunk.js": "/chat-by-blockchain/static/js/820.6610cff9.chunk.js",
+    "static/js/858.3329f717.chunk.js": "/chat-by-blockchain/static/js/858.3329f717.chunk.js",
+    "static/js/631.34814ec6.chunk.js": "/chat-by-blockchain/static/js/631.34814ec6.chunk.js",
+    "static/js/774.55de87de.chunk.js": "/chat-by-blockchain/static/js/774.55de87de.chunk.js",
+    "static/js/54.fa7936bf.chunk.js": "/chat-by-blockchain/static/js/54.fa7936bf.chunk.js",
+    "static/js/910.5362462a.chunk.js": "/chat-by-blockchain/static/js/910.5362462a.chunk.js",
+    "static/media/bg-3.png": "/chat-by-blockchain/static/media/bg-3.4039a7d633e415d45431.png",
+    "static/media/bg-2.png": "/chat-by-blockchain/static/media/bg-2.aabe470638ecd66a5c73.png",
+    "static/media/bg.png": "/chat-by-blockchain/static/media/bg.c6f3a2aa9c09687adb72.png",
+    "static/media/planet.png": "/chat-by-blockchain/static/media/planet.9bfce957a6b86a49f5c5.png",
+    "static/media/lock.png": "/chat-by-blockchain/static/media/lock.1f4981371b6d76cd00be.png",
+    "static/media/body-bg.jpg": "/chat-by-blockchain/static/media/body-bg.d9a2a974b460d6e0b61b.jpg",
+    "static/media/github.png": "/chat-by-blockchain/static/media/github.5091972ac73e65a7a289.png",
+    "static/media/bg-rounded.png": "/chat-by-blockchain/static/media/bg-rounded.3726e95398007c2c3da9.png",
+    "index.html": "/chat-by-blockchain/index.html",
+    "main.570479ae.css.map": "/chat-by-blockchain/static/css/main.570479ae.css.map",
+    "main.b5c0917e.js.map": "/chat-by-blockchain/static/js/main.b5c0917e.js.map",
+    "820.6610cff9.chunk.js.map": "/chat-by-blockchain/static/js/820.6610cff9.chunk.js.map",
+    "858.3329f717.chunk.js.map": "/chat-by-blockchain/static/js/858.3329f717.chunk.js.map",
+    "631.34814ec6.chunk.js.map": "/chat-by-blockchain/static/js/631.34814ec6.chunk.js.map",
+    "774.55de87de.chunk.js.map": "/chat-by-blockchain/static/js/774.55de87de.chunk.js.map",
+    "54.fa7936bf.chunk.js.map": "/chat-by-blockchain/static/js/54.fa7936bf.chunk.js.map",
+    "910.5362462a.chunk.js.map": "/chat-by-blockchain/static/js/910.5362462a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.570479ae.css",
+    "static/js/main.b5c0917e.js"
+  ]
+}
