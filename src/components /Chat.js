@@ -179,7 +179,7 @@ function Chat() {
                       addressList.length > 0 ? (
                         <ListGroup>
                           {addressList.map((value, index) => (
-                            <Chip className="p-3 m-1 rounded" icon={<FaceIcon />} label={`User ${value.slice(0, 5)}...${value.slice(38, 42)}`} color="primary" onClick={() => changeCurrectContact(index)}/>
+                            <Chip className="m-1 rounded contact" style={{padding:"25px",fontFamily:'Righteous'}} icon={<FaceIcon />} label={`User ${value.slice(0, 7)}...${value.slice(37, 42)}`} color="primary" onClick={() => changeCurrectContact(index)}/>
                           ))}
                         </ListGroup>
                       ) : (

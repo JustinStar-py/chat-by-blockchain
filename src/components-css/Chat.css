@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Poppins:wght@800&family=Righteous&family=Russo+One&display=swap');
 
 body {
     overflow-x: hidden;
@@ -35,6 +35,9 @@ input.form-control.dark-bg {
   padding-right: 2px;
 }
 
+#contactList span{
+  font-family: "Poppins";
+}
 /* .chat-box {
   max-height: 400px;
   overflow-y: scroll;
@@ -50,6 +53,9 @@ input.form-control.dark-bg {
   color: #ffffffec;
 }
 
+.message span {
+  font-family: "Poppins";
+}
 .my-message {
   background-color: #007bff00;
   color: #fff;
