@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Web3Button } from '@web3modal/react'
 
 const Header = (props) => {
   return (
@@ -32,7 +31,6 @@ const Header = (props) => {
           <>
           <Nav id="chat-navbar">
             <Nav.Link href="/">Home</Nav.Link>
-            <Web3Button/>
           </Nav>
         </>
       }

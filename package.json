@@ -4,16 +4,12 @@
   "homepage": "https://JustinStar-py.github.io/chat-by-blockchain",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.8",
     "@mui/material": "^5.14.10",
     "@mui/styled-engine-sc": "^5.14.10",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@web3modal/ethereum": "^2.7.1",
-    "@web3modal/react": "^2.7.1",
     "bootstrap": "^5.3.1",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
@@ -23,7 +19,6 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.11",
     "viem": "^1.10.14",
-    "wagmi": "^1.4.2",
     "web-vitals": "^2.1.4",
     "web3": "^4.1.2"
   },
@@ -58,6 +53,16 @@
     "css-loader": "^6.8.1",
     "gh-pages": "^6.0.0",
     "hardhat": "^2.17.3",
-    "style-loader": "^3.3.3"
+    "style-loader": "^3.3.3",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2",
+    "vitest": "0.34.5",
+    "vite": "4.4.9",
+    "danger": "11.3.0",
+    "vue": "3.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "turbo": "1.10.14",
+    "viem": "1.12.2"
   }
 }

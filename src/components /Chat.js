@@ -5,7 +5,6 @@ import { Container, Row, Col, ListGroup, Card } from "react-bootstrap";
 import Header from "./Header";
 import Web3 from "web3";
 import contractAbi from "../json/messagerFactoryABI.json";
-import { useAccount } from "wagmi";
 import Skeleton from "@mui/material/Skeleton";
 import SendIcon from '@mui/icons-material/Send';
 import Avatar from '@mui/material/Avatar';
@@ -16,7 +15,8 @@ import DoneAllIcon from '@mui/icons-material/DoneAll';
 const contractAddress = "0x2051ebC07BDbf1f9bCF41576084f0B3c8B4c9F57";
 
 function Chat() {
-  const { address, connector, isConnected } = useAccount();
+  const [ isConnected, setIsConnected ] = useState();
+  const [ address, setUserAddress ] = useState();
   const [web3, setWeb3] = useState(null);
   const [messages, setMessages] = useState([]);
   const [contract, setContract] = useState(null);
@@ -35,12 +35,10 @@ function Chat() {
 
   function Timestamp2Date(timestamp) {
     const date = new Date(timestamp * 1000);
-    const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
   
     const formattedTimestamp = `${month}/${day} ${hours}:${minutes}`;
     return formattedTimestamp;
@@ -91,7 +89,19 @@ function Chat() {
             contractAbi,
             contractAddress
           );
+
           setContract(contractInstance);
+
+          window.ethereum
+          .request({ method: 'eth_requestAccounts' })
+          .then((accounts) => {
+            setUserAddress(accounts[0]) // The user's Ethereum address
+            setIsConnected(true)
+            console.log(address, isConnected)
+          })
+          .catch((error) => {
+            console.error('Error connecting to MetaMask:', error);
+          });
         } catch (error) {
           console.error(error);
         }
@@ -125,7 +135,7 @@ function Chat() {
         setAddressListStatus(true);
     }
     sortContactList();
-  }, [messages]);
+  }, [messages, address]);
   
   useEffect(() => {
     async function fetchMessages() {
