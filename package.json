@@ -1,7 +1,7 @@
 {
   "name": "chat-by-blockchain",
   "version": "0.1.0",
-  "homepage": "https://JustinStar-py.github.io/",
+  "homepage": "https://JustinStar-py.github.io/chat-by-blockchain",
   "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.14.8",
@@ -19,16 +19,15 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.11",
     "viem": "^1.10.14",
-    "web-vitals": "^2.1.4",
-    "web3": "^4.1.2"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,18 +50,18 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "css-loader": "^6.8.1",
+    "danger": "11.3.0",
     "gh-pages": "^6.0.0",
     "hardhat": "^2.17.3",
-    "style-loader": "^3.3.3",
     "prettier": "3.0.3",
-    "typescript": "5.2.2",
-    "vitest": "0.34.5",
-    "vite": "4.4.9",
-    "danger": "11.3.0",
-    "vue": "3.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "style-loader": "^3.3.3",
     "turbo": "1.10.14",
-    "viem": "1.12.2"
+    "typescript": "5.2.2",
+    "viem": "1.12.2",
+    "vite": "4.4.9",
+    "vitest": "0.34.5",
+    "vue": "3.3.4"
   }
 }
