@@ -1,7 +1,7 @@
 {
   "name": "chat-by-blockchain",
   "version": "0.1.0",
-  "homepage": "https://JustinStar-py.github.io/chat-by-blockchain",
+  "homepage": "https://JustinStar-py.github.io/",
   "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.14.8",

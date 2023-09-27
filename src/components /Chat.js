@@ -214,7 +214,7 @@ function Chat() {
               <Card className="dark-card" style={{ height: 590 + "px" }}>
                 <Card.Header>Chat Page</Card.Header>
                 <Card.Body>
-                <div class="chat-box">
+                <div className="chat-box">
                     {messagesList.length > 0 ? (
                         messagesList.map((val, index) => (
                           <div key={index} className={`message ${val.type === "received" ? "their" : "my"}-message`}>
