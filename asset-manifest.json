@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chat-by-blockchain/static/css/main.e82c93be.css",
-    "main.js": "/chat-by-blockchain/static/js/main.8075153e.js",
+    "main.css": "/chat-by-blockchain/static/css/main.f8ca61e0.css",
+    "main.js": "/chat-by-blockchain/static/js/main.36910f78.js",
     "static/media/bg-3.png": "/chat-by-blockchain/static/media/bg-3.4039a7d633e415d45431.png",
     "static/media/bg-2.png": "/chat-by-blockchain/static/media/bg-2.aabe470638ecd66a5c73.png",
     "static/media/bg.png": "/chat-by-blockchain/static/media/bg.c6f3a2aa9c09687adb72.png",
@@ -11,11 +11,11 @@
     "static/media/github.png": "/chat-by-blockchain/static/media/github.5091972ac73e65a7a289.png",
     "static/media/bg-rounded.png": "/chat-by-blockchain/static/media/bg-rounded.3726e95398007c2c3da9.png",
     "index.html": "/chat-by-blockchain/index.html",
-    "main.e82c93be.css.map": "/chat-by-blockchain/static/css/main.e82c93be.css.map",
-    "main.8075153e.js.map": "/chat-by-blockchain/static/js/main.8075153e.js.map"
+    "main.f8ca61e0.css.map": "/chat-by-blockchain/static/css/main.f8ca61e0.css.map",
+    "main.36910f78.js.map": "/chat-by-blockchain/static/js/main.36910f78.js.map"
   },
   "entrypoints": [
-    "static/css/main.e82c93be.css",
-    "static/js/main.8075153e.js"
+    "static/css/main.f8ca61e0.css",
+    "static/js/main.36910f78.js"
   ]
 }
