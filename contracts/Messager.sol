@@ -13,9 +13,10 @@ contract Payment {
     Message[] public allMessages;
     event messageEvent(address indexed _from, address _to, string _message ,uint256 _timestamp);
 
-    function sendMessage(address _to, string memory _message) public {
+    function sendMessage(address _to, string memory _message) public returns (bool) {
         allMessages.push(Message(msg.sender, _to, _message, block.timestamp));
         emit messageEvent(msg.sender, _to, _message, block.timestamp);
+        return true;
     }
 
     function getMessagesForAddress(address _address) public view returns (Message[] memory) {
