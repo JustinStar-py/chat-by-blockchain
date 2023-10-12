@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Poppins:wght@800&family=Righteous&family=Russo+One&display=swap');
+
+body {
+    overflow-x: hidden;
+    /* background: rgb(51, 51, 51) !important; */
+    /* background-size: cover; */
+}
+
+.Chat {
+  height: 714px;
+  background: linear-gradient(359deg,rgb(26 26 26 / 92%),rgb(0 107 255 / 22%) 95%);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
+}
+
+.dark-card.card {
+  background: rgb(0 0 0 / 40%);
+  color: white;
+  filter: drop-shadow(2px 4px 6px black);
+  backdrop-filter: blur(5px);
+}
+
+.mb-1.bg-light.list-group-item {
+  /* filter: invert(1); */
+  color: black !important;
+  border: none;
+  border-radius: 11px;
+  background: #c5deff !important;
+}
+
+input.form-control.dark-bg {
+  background: #d0d0d0 !important;
+  border: none;
+  color: black;
+  padding-right: 2px;
+}
+
+#contactList span{
+  font-family: "Poppins";
+}
+/* .chat-box {
+  max-height: 400px;
+  overflow-y: scroll;
+} */
+
+.col-sm-8 .card-body {
+  overflow-y: auto;
+}
+
+.message p {
+  margin: 0px !important;
+  background-color: #c5deff00;
+  color: #ffffffec;
+}
+
+.message span {
+  font-family: "Poppins";
+}
+
+.my-message {
+  background-color: #00000000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 1;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+/* Style for other person's messages */
+.their-message {
+  background-color: #f0f0f000;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 1;
+  margin-left: 0px;
+  margin-right: auto;
+}
+
+.card-header {
+    /* background: linear-gradient(45deg, #2fd5ff, #4961ff); */
+      background: #20d2ff !important;
+}
+
+#connect-btn {
+  margin-left: auto;
+  margin-right: 0px;
+  font-family: "Poppins";
+}
+
+#connect-btn:disabled {
+  background-color: #001b36 !important;
+  opacity: 1 !important;
+  border-color: #001b36;
+}
+
+.custom-chip {
+  display: inline-flex; 
+  align-items: center;
+  height: 32px; 
+  border-radius: 13px;
+  background-color: #1976d2; 
+  color: white;
+  font-family: 'Righteous', cursive;
+  cursor: pointer;
+  width: 100%;
+  padding: 25px;
+}
+
+.custom-chip:hover {
+  background-color: #3793ef;
+}
+
+.custom-chip svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  color: white !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.custom-chip span {
+  font-size: 0.875rem;
+  font-weight: 500; 
+  line-height: 1.25;
+}
+
+input.form-control {
+  background: antiquewhite !important;
+  margin-right: 10px;
+  border-radius: 10px !important;
+}
+
+.msg-chip {
+  /* background-color: #4bdbff; */
+  /* color: #01579b; */
+  padding: 8px 12px;
+  width: max-content;
+  border-radius: 16px;
+  max-width: 580px;
+}
+
+.label {
+  display: block;
+  white-space: normal;
+  font-size: 0.875rem;
+  color: #020014;
+  text-align: left;
+}
+
+.skeleton {
+  background-color: #00cdfbdd;
+  width: auto;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  animation: opacity-anim 3s infinite;
+}
+
+@keyframes opacity-anim {
+   0% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0.2;
+   }
+   100% {
+    opacity: 1;
+   }
+}
+
+.skeleton-lg {
+  height: 120px;
+}
+
+.skeleton-sm {
+  height: 80px;
+}
+
+.msg-chip svg {
+  margin-right: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 0.9em;
+  height: 0.9em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.25rem;
+  color: rgb(0, 93, 0);
+}
+
+.sent-chip {
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+.sent-chip .time {
+  justify-content: right;
+}
+
+.sent-chip svg  {
+  margin-left: 3px;
+  color: rgba(28, 255, 28, 0.84);
+}
+
+.opacity-falf {
+  opacity: 0.75;
+}
+
+.time {
+  font-size: 0.70rem;
+  margin: 2px;
+  display: flex;
+  align-items: center;  
+}
+
+.status-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+}
+/* Set the color for the scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(56, 56, 56);
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 4px;
+}
+
+/* Set the color for the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 9px;
+  margin: 10px;
+  border: 5px solid black;
+}
+
+/* Optionally, you can style the scrollbar itself */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+  padding: 5px;
+}
+
+#create-chat-modal {
+    background: rgb(2 0 20 / 57%) !important;
+    backdrop-filter: blur(17px) !important;
+    color:light !important;
+}
+
+.modal-content {
+  background-color: #212529b3 !important;
+}
+
+.modal-header {
+    background: #0d7afd;
+    border: none;
+    font-family: "Poppins";
+}
+
+.modal-footer {
+  border: none;
+}
+
+.custom-input {
+    background: rgb(255, 255, 255) !important;
+    border-radius: 0px 10px 10px 0px !important;
+}
+
+#contact-input {
+  font-family: 'Righteous';
+}
+
+#basic-addon3 {
+    background: lightslategrey;
+    font-family: "Righteous";
+}
+
+.bg-purple {
+  background-color: #6823ff;
+}
+
+#added-text {
+  background-color: rgba(255, 255, 77, 0.529);
+  display: inline-block;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 10px;
+  margin: 0px !important;
+}
+
+.card-header {
+  font-family: 'Righteous', "system-ui" !important;
+}
+
+.nav-item .open-app {
+  background: rgb(122, 39, 255);
+  border-radius: 12px;
+  margin: 10px;
+}
+
+#emojis-list {
+  max-height: 700px;
+  overflow-y: scroll;
+}
+
+#emojis-list option {
+  display: inline-flex;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#emojis-list option:hover{
+   background-color: #6823ff;
+}
+
+@media screen and (max-width: 600px) {
+   .card {
+      margin-bottom: 20px !important;
+   }
+   .Chat { 
+      height: auto !important;
+   }
+   #connect-btn {
+    width: 300px;
+    position: relative !important;
+    right: 0px !important;
+  }
+}

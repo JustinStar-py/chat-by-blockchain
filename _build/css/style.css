@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+
+body {
+    overflow-x: hidden;
+    background: url(/static/images/body-bg.jpg);
+    /* background-size: 600px; */
+    /* filter: drop-shadow(10px); */
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: hue-rotate(25deg); */
+}
+
+.App {
+  /* background: url(https://images.wallpaperscraft.com/image/single/sky_stars_long_exposure_944443_3840x2160.jpg) !important; */
+  background: linear-gradient(120deg,rgb(21 21 21 / 38%),rgb(0 0 0 / 17%) 95%);
+  backdrop-filter: blur(3px);
+  text-align: center;
+  background-size: 1600px !important;
+  background-attachment:fixed !important;
+  background-repeat: repeat-x !important;
+}
+
+nav {
+  font-family: "Play";
+}
+
+.navbar .home-navbar {
+    margin-right: auto;
+    margin-left: 0px;
+}
+
+.navbar .chat-navbar li button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light {
+  position: relative;
+  top: 15px;
+  background: url(/static/images/bg-rounded.png);
+  /* background: linear-gradient(rgb(246, 246, 246),rgb(247, 254, 255)); */
+  background-size: cover;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  /* filter: invert(1); */
+  background-position: top;
+  margin: 0px 10px;
+
+}
+
+a.nav-link {
+  font-family: 'Righteous';
+  color: rgb(75, 75, 75);
+  font-size: 17px;
+  transition: 0.2s ease-in-out;
+  padding:5px;
+  /* border-right: 6.5px dotted rgba(54, 54, 54, 0.5); */
+  /* text-shadow: 1px 1px 10px rgb(119, 255, 255); */
+}
+
+a.nav-link:hover {
+  font-family: 'Righteous';
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  /* text-shadow: 1px 1px 10px rgb(232, 255, 253); */
+}
+
+@media screen and (min-width: 601px) {
+    /* Set the color for the scrollbar thumb (draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+  }
+
+  /* Set the color for the scrollbar track (background) */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+    /* border-radius: 9px; */
+    border: 5px solid black;
+  }
+
+  /* Optionally, you can style the scrollbar itself */
+  ::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+    padding: 5px;
+  }
+
+  #section-1 {
+    background: url("/static/images/bg.png");
+    background-size: contain;
+    height: 830px;
+    background-repeat: repeat-x;
+    margin: 0px 85px 40px 85px;
+    /* z-index: -9; */
+  }
+  
+  #section-2 {
+    background: url("/static/images/bg-2.png");
+    background-size: contain;
+    height: 830px;
+    background-repeat: repeat-x;
+    margin: 0px 85px 40px 25px;
+  }
+  
+  #section-3 {
+    background: url("/static/images/bg-3.png");
+    background-size: contain;
+    height: 830px;
+    background-repeat: repeat-x;
+    margin: 0px 85px 40px 85px;
+  }
+  
+  #first-fantasy {
+    width: 850px;
+    position: relative;
+    left: 505px;
+    top: 200px;
+    transform: rotateZ(30deg);
+    /* z-index: -10; */
+  }
+  
+  #secend-fantasy {
+    width: 400px;
+    position: relative;
+    right: 405px;
+    top: 130px;
+    transform: rotateZ(30deg);
+    /* z-index: -10; */
+  }
+  
+  #third-fantasy {
+    width: 350px;
+    position: relative;
+    left: 305px;
+    top: 200px;
+    transform: rotateZ(30deg);
+    /* z-index: -10; */
+  }
+  
+  #launch-btn {
+    position: relative;
+    width: 225px;
+    font-family: "Righteous";
+    right: 54.5rem;
+    top: 35%;
+  }
+  
+  #github-btn {
+    position: relative;
+    width: 225px;
+    font-family: "Righteous";
+    right: 53.5rem;
+    top: 35%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  #section-1 {
+    background: url("/static/images/bg-mobile.png");
+    background-size: contain;
+    height: 1840px;
+    background-repeat: no-repeat;
+    /* margin: 0px 85px 40px 85px; */
+    /* z-index: -9; */
+  }
+  
+  #section-2 {
+    /* display: none !important; */
+    width: 0.01px;
+  }
+  
+  #section-3 {
+    /* display: none !important; */
+    width: 0.01px;
+  }
+  
+  #first-fantasy {
+    width: 300px;
+    position: absolute;
+    top: 350px;
+    left: 45px;
+    transform: rotateZ(-20deg);
+  }
+  
+  #secend-fantasy {
+    width: 120px;
+    position: absolute;
+    top: 70%;
+    left: 35px;
+    transform: rotateZ(-20deg);
+    opacity: 0.8;
+  }
+  
+  #third-fantasy {
+    display: none;
+  }
+  
+  body {
+    background: black !important;
+  }
+
+  #launch-btn {
+    /* right: 135px; */
+    position: absolute;
+    width: 140px;
+    font-family: "Righteous";
+    top: 32%;
+    left: 10%;
+  }
+  
+  #github-btn {
+    /* right: 135px; */
+    position: absolute;
+    width: 140px;
+    font-family: "Righteous";
+    top: 34.5%;
+    left: 10%;
+  }
+
+  li.nav-item.open-app {
+    background: rgb(0 192 255);
+    border-radius: 12px;
+    margin: 10px;
+    color: black;
+    padding: 5px;
+  }
+  
+}
